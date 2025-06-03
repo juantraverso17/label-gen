@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Etiquetas de Precios</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Generador de Etiquetas</h1>
+        <label>
+            Precio contado:
+            <input type="number" id="precioContado" min="0" step="1">
+        </label>
+        <label>
+            Porcentaje (%):
+            <input type="number" id="porcentaje" value="21" min="0" step="1">
+        </label>
+        <label>
+            Talle:
+            <select id="talle">
+                <option>S - 1</option>
+                <option>M - 2</option>
+                <option>L - 3</option>
+                <option>XL - 4</option>
+                <option>XXL - 5</option>
+                <option>XXXL - 6</option>
+                <option>U</option>
+            </select>
+        </label>
+        <button id="generarEtiqueta">Generar etiqueta</button>
+    </div>
+    <script type="module" src="scripts/etiquetas.js"></script>
+</body>
+</html>
