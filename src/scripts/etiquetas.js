@@ -6,13 +6,15 @@ function generarEtiquetaPrecio(precio) {
 }
 
 document.getElementById('generarEtiqueta').addEventListener('click', function() {
-    const precioContado = parseInt(document.getElementById('precioContado').value, 10) || 0;
+    const precioCosto = parseInt(document.getElementById('precioCosto').value, 10) || 0;
+    const ganancia = parseFloat(document.getElementById('ganancia').value) || 100;
     const porcentaje = parseFloat(document.getElementById('porcentaje').value) || 21;
     const talle = document.getElementById('talle').value;
 
+    // Calcular el precio de contado
+    let precioContado = precioCosto * (1 + ganancia / 100);
     // Formatear precio contado con separador de miles
     const precioContadoFormateado = precioContado.toLocaleString('es-AR');
-
     // Calcular precio de lista
     let precioLista = precioContado * (1 + porcentaje / 100);
     // Redondear al próximo múltiplo de 1000
